@@ -1,0 +1,12 @@
+
+.img-logo {
+  width:400px;
+  height:300px;
+  border-radius:150px;
+}
+.homePage-card-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

@@ -1,0 +1,23 @@
+.div-house-invalid{
+  height:500px;
+  width:100%;
+}
+
+.div-house-invalid p {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+
+.div-select-house{
+  margin-top: 20px;
+  margin-left: 20px;
+  width:100%;
+}
+
+.div-table th{
+  text-align: center;
+}
+
+
+

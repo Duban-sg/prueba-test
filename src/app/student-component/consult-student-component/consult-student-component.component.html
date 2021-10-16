@@ -1,0 +1,47 @@
+<div class="kc_fab_main_btn">
+  <button mat-fab color="accent" (click)="toRegisterStudent()">
+    <mat-icon>playlist_add</mat-icon>
+  </button>
+</div>
+<div class="body-body">
+
+  <mat-card class="homePage-card">
+    <mat-card-title>Estudiantes de Hogwarts</mat-card-title>
+    <div class="div-table">
+      <table mat-table
+             [dataSource]="dataSource|paginatorPipe:pageEvent.pageIndex:(pageEvent.pageSize)?pageEvent.pageSize:paginationSize"
+             class="mat-elevation-z8">
+        <ng-container matColumnDef="Name">
+          <th mat-header-cell class="table-name" *matHeaderCellDef>Name</th>
+          <td mat-cell class="table-name" *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Patronus">
+          <th mat-header-cell class="table-patronus" *matHeaderCellDef>Patronus</th>
+          <td mat-cell class="table-patronus" *matCellDef="let element"> {{element.patronus}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Age">
+          <th mat-header-cell class="table-age" *matHeaderCellDef>Age</th>
+          <td mat-cell class="table-age" *matCellDef="let element"> {{element.age}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Image">
+          <th mat-header-cell class="table-image" *matHeaderCellDef>Image</th>
+          <td mat-cell class="table-image" *matCellDef="let element">
+            <img src="{{element.image}}" alt="No Image">
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <mat-paginator
+        [length]="dataSize"
+        [pageSize]="paginationSize"
+        [pageSizeOptions]="[5, 10, 20]"
+        (page)="pageEvent = $event"
+        showFirstLastButtons
+        aria-label="Select page of periodic elements">
+      </mat-paginator>
+    </div>
+
+  </mat-card>
+</div>
+

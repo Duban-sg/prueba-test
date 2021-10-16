@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background: rgb(48,48,48); }
+
+.body-body{
+  margin: 30px;
+  height: 60%;
+}
+table{
+  margin-right: 50px;
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.table-name{
+  width: 300px;
+}
+
+.table-patronus{
+  width: 200px;
+}
+
+.table-age{
+  width: 100px;
+}
+.table-image{
+  width: 500px;
+}
+.table-image img{
+  width: 80px;
+  height: 80px;
+  border-radius: 150px;
+}
+.div-table{
+  margin-top: 20px;
+  padding: 20px;
+  height: 600px;
+  max-width: 100%;
+  overflow: auto;
+}
+
+table td{
+  height:100px;
+}
+mat-card-title{
+  text-align: center;
+}

@@ -1,0 +1,66 @@
+<mat-toolbar class="nav-toolbar">
+  <div>
+    <button
+      type="button"
+      mat-button
+      (click)="drawer.toggle()"
+      mat-icon-button class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div class="Title-app">
+    <a [routerLink]="['/']" >
+      <span >HOGWARTS</span>
+    </a>
+  </div>
+
+
+</mat-toolbar>
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <a [routerLink]="['/']" (click)="drawer.toggle()">
+      <mat-icon > <img [src]="_url_logo" > </mat-icon>
+    </a>
+
+    <br>
+    <mat-divider></mat-divider>
+    <br>
+    <mat-accordion class="nav-accordion">
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Personajes
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <button mat-button [routerLink]="['/Personajes/Listar','Slytherin']"  (click)="drawer.toggle()">Casa Slytherin</button>
+        <button mat-button [routerLink]="['/Personajes/Listar','Gryffindor']"  (click)="drawer.toggle()">Casa Gryffindor</button>
+        <button mat-button [routerLink]="['/Personajes/Listar','Ravenclaw']"  (click)="drawer.toggle()">Casa Ravenclaw</button>
+        <button mat-button [routerLink]="['/Personajes/Listar','hufflepuff']"  (click)="drawer.toggle()">Casa hufflepuff</button>
+      </mat-expansion-panel>
+      <br>
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Profesores
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <button mat-button [routerLink]="['/Profesores/Listar']" (click)="drawer.toggle()">Lista de Profesores</button>
+      </mat-expansion-panel>
+      <br>
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Estudiantes
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <button mat-button [routerLink]="['/Estudiantes/Listar']" (click)="drawer.toggle()">Lista de Estudiantes</button>
+        <button mat-button [routerLink]="['/Estudiantes/Registrar']" (click)="drawer.toggle()">Agregar Estudiantes</button>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+
+  </mat-drawer>
+</mat-drawer-container>
+

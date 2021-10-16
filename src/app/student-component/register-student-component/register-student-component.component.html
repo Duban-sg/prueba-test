@@ -1,0 +1,61 @@
+<div class="body-body">
+  <mat-card class="homePage-card">
+    <mat-card-title>Registro de estudiantes</mat-card-title>
+    <mat-card-content>
+      <div class="div-form-register-student">
+        <form class="example-form" [formGroup]="formGroup">
+          <div>
+            <mat-form-field appearance="outline" class="towInput">
+              <mat-label>Nombre de estudiante</mat-label>
+              <input matInput placeholder="ej: harry potter " required formControlName="name">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="towInput">
+              <mat-label>Patronus</mat-label>
+              <input matInput placeholder="ej: stag " required formControlName="patronus">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field appearance="outline" class="towInput">
+              <mat-label>Seleccione una casa</mat-label>
+              <mat-select formControlName="house">
+                <mat-option *ngFor="let house of _houses" [value]="house">
+                  {{house}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="towInput">
+              <mat-label>Fecha de nacimiento</mat-label>
+              <input matInput [matDatepicker]="datepicker" formControlName="dateOfBirth">
+              <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+              <mat-datepicker #datepicker></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field appearance="outline" class="oneInput">
+              <mat-label>Seleccione una imagen</mat-label>
+              <input
+                id="inputFile"
+                type="file"
+                accept="image/*"
+                class="inpunt-file-hiden"
+                required formControlName="image"
+              >
+              <input id="viewNameFile" matInput type="text"  readonly="true"  (click)="openDialog()" >
+              <mat-datepicker-toggle matSuffix (click)="openDialog()">
+                <mat-icon matDatepickerToggleIcon>collections</mat-icon>
+              </mat-datepicker-toggle>
+            </mat-form-field>
+          </div>
+          <div class="btn-register">
+            <button type="submit" mat-raised-button (click)="onSuminted()" color="accent" >Registrar</button >
+          </div>
+        </form>
+      </div>
+
+    </mat-card-content>
+
+  </mat-card>
+
+</div>
+
+

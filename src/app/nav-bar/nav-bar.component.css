@@ -1,0 +1,44 @@
+.container {
+  position: absolute;
+  height: 90%;
+  z-index: 3;
+}
+.sidenav {
+  width: 300px;
+  height: 100%;
+  padding: 20px;
+}
+.nav-toolbar{
+  text-align: center;
+  height: 10%;
+}
+.nav-accordion{
+  width: 100%;
+}
+
+mat-expansion-panel{
+  width: 100%;
+}
+mat-icon{
+  width:100%;
+  justify-items: center;
+  align-items: center;
+
+}
+
+img {
+  max-height: 200px;
+  max-width: 200px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.Title-app{
+  width:90%;
+  position: center;
+  text-align: center;
+  justify-content: center;
+}
+a{
+  text-decoration: none;
+  color: #ffffff;
+}
